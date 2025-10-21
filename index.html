@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Grid</title>
+    <link rel="stylesheet" href="grid.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Palanquin+Dark:wght@400;500;600;700&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-section">
+            My Portfolio
+        </div>
+
+        <div class="navbar-section">
+            <span id="menu">&#9776;</span>
+            <ul id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="image-section">
+            <img src="harv.JPG" alt="Harvey's photo">
+        </div>
+
+        <div class="text-section">
+            <ul>
+                <li>Hi! <br>I'm Harvey B. Dampios.</li>
+                <li>BSInT - 3rd Year</li>
+            </ul>
+        </div>
+
+        <div class="quote-section-2">
+            <p>“Keep working on reaching your goals.”</p>
+        </div>
+
+        <div class="footer-section">
+            <p>© 2025 My Portfolio by Harvey B. Dampios. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+    const menu = document.getElementById('menu');
+    const navLinks = document.querySelector('.navbar-section ul');
+
+    menu.addEventListener('click', () => {
+        if (window.innerWidth <= 400) {
+            navLinks.classList.toggle('show');
+        }
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 400) {
+            navLinks.classList.remove('show');
+        }
+    });
+</script>
+</body>
+</html>
